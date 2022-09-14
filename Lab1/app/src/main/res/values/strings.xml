@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab1_Sam</string>
+    <string name="your_height">Your Height:</string>
+    <string name="your_weight">Your Weight:</string>
+    <string name="kilograms">kilograms</string>
+    <string name="centimeters">centimeters</string>
+    <string name="compute_bmi">Compute BMI</string>
+    <string name="your_bmi">Your BMI</string>
+</resources>
