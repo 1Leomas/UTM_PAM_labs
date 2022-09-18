@@ -1,4 +1,9 @@
 /Lab1_unity
+~*
+*.docx
+
+
+
 # Gradle files
 .gradle/
 build/
