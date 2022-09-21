@@ -118,10 +118,10 @@
             android:layout_height="match_parent"
             android:digits="0123456789"
             android:hint="@string/centimeters"
+            android:imeOptions="actionDone"
             android:inputType="numberDecimal"
             android:textColor="#FFFFFF"
-            android:visibility="visible"
-            android:imeOptions="actionDone"/>
+            android:visibility="visible" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
