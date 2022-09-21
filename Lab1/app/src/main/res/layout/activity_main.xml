@@ -18,22 +18,22 @@
 
     <Button
         android:id="@+id/button_com"
-        android:layout_width="0dp"
+        android:layout_width="142dp"
         android:layout_height="70dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="56dp"
-        android:layout_marginEnd="48dp"
         android:text="@string/compute_bmi"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/button_reset"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/button_reset"
-        android:layout_width="143dp"
+        android:layout_width="142dp"
         android:layout_height="70dp"
         android:layout_marginTop="56dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/text_reset"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -120,7 +120,8 @@
             android:hint="@string/centimeters"
             android:inputType="numberDecimal"
             android:textColor="#FFFFFF"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:imeOptions="actionDone"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -146,7 +147,8 @@
             android:textColor="#FFFFFF"
             android:textColorHint="#616161"
             android:visibility="visible"
-            tools:visibility="visible" />
+            tools:visibility="visible"
+            android:imeOptions="actionDone"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

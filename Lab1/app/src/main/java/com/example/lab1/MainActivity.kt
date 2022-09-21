@@ -36,9 +36,11 @@ class MainActivity : AppCompatActivity() {
                 if(input_height.text?.length != 0
                     || input_weight.text?.length != 0)
                 {
-
                     input_weight.setText("")
                     input_height.setText("")
+                    text_result.text = ""
+                    text_your_bmi.text = ""
+                    text_result2.text = ""
                 }
             }
         }
