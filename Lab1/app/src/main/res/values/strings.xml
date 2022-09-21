@@ -6,4 +6,5 @@
     <string name="centimeters">centimeters</string>
     <string name="compute_bmi">Compute BMI</string>
     <string name="your_bmi">Your BMI</string>
+    <string name="text_reset">Reset</string>
 </resources>
