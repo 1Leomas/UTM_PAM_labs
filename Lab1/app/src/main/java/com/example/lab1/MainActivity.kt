@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
                 if(bmi > 18.5 && bmi < 24.9) text_result2.text = "Normal weight"
                 if(bmi > 25.0 && bmi < 29.9) text_result2.text = "Overweight"
                 if(bmi > 30) text_result2.text = "Obesity"
-
             }
 
             button_reset.setOnClickListener {
