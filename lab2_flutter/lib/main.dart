@@ -143,18 +143,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           Padding(
             padding: const EdgeInsets.fromLTRB(0, 26, 0, 0),
             child: Text(
-              //bmi,
               bmi = bmi.isNotEmpty ? 'Your BMI is $bmi' : '',
-              //myController.text = (myController.text.isNotEmpty) ? 'Your BMI is ${myController.text}' : '',
               style: const TextStyle (fontSize: 28),
             ),
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(0, 26, 0, 0),
             child: Text(
-              //bmi_status,
               bmi_status = bmi.isNotEmpty ? bmi_status : '',
-              //myController.text = (myController.text.isNotEmpty) ? bmi_status: '',
               style: const TextStyle (fontSize: 28),
             ),
           ),
