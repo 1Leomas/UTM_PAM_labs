@@ -60,7 +60,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               keyboardType: TextInputType.number,
               validator: (String? value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter some text';
+                  return 'Please enter your height';
                 }
                 return null;
               },
@@ -81,7 +81,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               keyboardType: TextInputType.number,
               validator: (String? value) {
                 if (value == null || value.isEmpty) {
-                  return 'Please enter some text';
+                  return 'Please enter your weight';
                 }
                 return null;
               },
@@ -142,15 +142,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(0, 26, 0, 0),
-            child: Text(
-              bmi = bmi.isNotEmpty ? 'Your BMI is $bmi' : '',
+            child: Text( bmi.isNotEmpty ? 'Your BMI is $bmi' : '',
               style: const TextStyle (fontSize: 28),
             ),
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(0, 26, 0, 0),
-            child: Text(
-              bmi_status = bmi.isNotEmpty ? bmi_status : '',
+            child: Text( bmi.isNotEmpty ? bmi_status : '',
               style: const TextStyle (fontSize: 28),
             ),
           ),
@@ -159,5 +157,3 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     );
   }
 }
-
-
