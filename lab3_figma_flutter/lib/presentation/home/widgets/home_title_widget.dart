@@ -12,7 +12,6 @@ class HomeTitleWidget extends StatelessWidget {
         style: TextStyles.textStyleSFPro32(),
         textAlign: TextAlign.center,
       ),
-      padding: EdgeInsets.fromLTRB(55, 79, 55,0),
     );
   }
 }

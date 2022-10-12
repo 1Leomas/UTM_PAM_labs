@@ -10,4 +10,18 @@ class TextStyles {
           fontWeight: FontWeight.w600,
           color: color ?? CustomColors.white,
           fontFamily: Fonts.sfProText);
+
+  static TextStyle textStyleSFPro40({Color? color}) =>
+      TextStyle(
+          fontSize: 40,
+          fontWeight: FontWeight.w500,
+          color: color ?? CustomColors.white,
+          fontFamily: Fonts.sfProText);
+
+  static TextStyle textStyleSFPro14({Color? color}) =>
+      TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.w500,
+          color: color ?? CustomColors.white,
+          fontFamily: Fonts.sfProText);
 }
