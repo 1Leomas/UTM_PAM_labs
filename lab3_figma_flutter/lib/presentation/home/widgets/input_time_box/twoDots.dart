@@ -2,16 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:lab3_figma_flutter/resources/strings.dart';
 import 'package:lab3_figma_flutter/resources/text_styles.dart';
 
-
-class HomeTitleWidget extends StatelessWidget {
+class TwoDotsWidget extends StatelessWidget {
+  const TwoDotsWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Padding(
+      padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
       child: Text(
-        Strings.homeTitle,
-        style: TextStyles.textStyleSFPro32(),
-        textAlign: TextAlign.center,
+        Strings.towDots,
+        style: TextStyles.textStyleSFPro40(),
       ),
     );
   }
