@@ -12,6 +12,8 @@ class _InputTimeWidgetState extends State<InputTimeWidget> {
   Widget build(BuildContext context) {
     InputTimeController controller = Get.find();
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
           Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -25,24 +27,24 @@ class _InputTimeWidgetState extends State<InputTimeWidget> {
         ),
         const SizedBox(height: 5),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 40),
+              padding: const EdgeInsets.only(left: 28),
               child: Text(
                 Strings.hours,
                 style: TextStyles.textStyleSFPro14(),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(0.0),
+              padding: const EdgeInsets.only(left: 42),
               child: Text(
                 Strings.minutes,
                 style: TextStyles.textStyleSFPro14(),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 25),
+              padding: const EdgeInsets.only(left: 33),
               child: Text(
                 Strings.seconds,
                 style: TextStyles.textStyleSFPro14(),

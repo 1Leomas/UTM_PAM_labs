@@ -30,6 +30,7 @@ class InputTimeController extends GetxController {
   }
 
   var duration = Duration().obs;
+  int totalDuration = 0;
   Timer? timer;
 
   final sHours = "".obs;
@@ -66,11 +67,16 @@ class InputTimeController extends GetxController {
 
   void resetTimer() {
     duration.value = Duration(hours: hours.value, minutes: minutes.value, seconds: seconds.value);
+    totalDuration = duration.value.inSeconds;
     update();
   }
 
+  bool isTimerRuning() {
+    return timer == null ? false : timer!.isActive;
+  }
+
   bool isCompleted() {
-    return seconds == 0;
+    return duration.value == totalDuration || duration.value.inSeconds == 0;
   }
 
 }

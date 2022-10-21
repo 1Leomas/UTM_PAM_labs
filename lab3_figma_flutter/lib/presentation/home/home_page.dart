@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lab3_figma_flutter/presentation/home/widgets/build_time.dart';
-import 'package:lab3_figma_flutter/presentation/home/widgets/button_controls_widget.dart';
+import 'package:lab3_figma_flutter/presentation/home/widgets/buttons_space/button_controls_widget.dart';
 import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/input_time_controller.dart';
 import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/input_time_widget.dart';
 import 'package:lab3_figma_flutter/resources/custom_colors.dart';
@@ -27,9 +27,10 @@ class _HomePageState extends State<HomePage> {
               children: [
                 const SizedBox(height: 79),
                 HomeTitleWidget(),
-                const SizedBox(height: 240),
+                const SizedBox(height: 140),
                 SizedBox(
-                  height: 92,
+                  height: 298,
+                  width: 298,
                   child:  Obx(() {
                     if(controller.buttonState.isFalse) {
                       return InputTimeWidget();
@@ -38,7 +39,7 @@ class _HomePageState extends State<HomePage> {
                     }
                   }),
                 ),
-                const SizedBox(height: 205),
+                const SizedBox(height: 105),
                 ButtonControlWidget(),
               ],
             ),

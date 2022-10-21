@@ -6,10 +6,10 @@ import 'fonts.dart';
 class TextStyles {
   static TextStyle textStyleSFPro32({Color? color}) =>
       TextStyle(
-          fontSize: 32,
-          fontWeight: FontWeight.w600,
-          color: color ?? CustomColors.white,
-          fontFamily: Fonts.sfProText);
+        fontSize: 32,
+        fontWeight: FontWeight.w600,
+        color: color ?? CustomColors.white,
+        fontFamily: Fonts.sfProText);
 
   static TextStyle textStyleSFPro40({Color? color}) =>
       TextStyle(
