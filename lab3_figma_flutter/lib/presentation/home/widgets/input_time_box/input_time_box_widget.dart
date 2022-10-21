@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/input_time_contreller.dart';
-//import 'package:flutter/material.dart';
+import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/input_time_controller.dart';
 import 'package:lab3_figma_flutter/resources/custom_colors.dart';
 import 'package:lab3_figma_flutter/resources/enums.dart';
 import 'package:lab3_figma_flutter/resources/strings.dart';
@@ -21,15 +19,8 @@ class InputTimeBoxWidget extends StatefulWidget {
 class _InputTimeBoxWidgetState extends State<InputTimeBoxWidget> {
 
   @override
-  void dispose() {
-    widget.inputController.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    final ctr = Get.find<InputTimeController>();
-
+    final controller = Get.find<InputTimeController>();
 
     return Column(
       children: [
@@ -55,14 +46,18 @@ class _InputTimeBoxWidgetState extends State<InputTimeBoxWidget> {
               maxLength: 2,
               cursorColor: CustomColors.white,
               onChanged: (value) {
-                if(widget.timeType == TimeType.hours) {
-                  ctr.updateHours(int.parse(widget.inputController.text));
-                }
-                if(widget.timeType == TimeType.minutes) {
-                  ctr.updateMinutes(int.parse(widget.inputController.text));
-                }
-                if(widget.timeType == TimeType.seconds) {
-                  ctr.updateSeconds(int.parse(widget.inputController.text));
+                  if(widget.timeType == TimeType.hours) {
+                    controller.updateHours(value.isNotEmpty
+                        ? int.parse(widget.inputController.text)
+                        : 0);
+                  }
+                  if(widget.timeType == TimeType.minutes) {
+                    controller.updateMinutes(value.isNotEmpty
+                        ? int.parse(widget.inputController.text)
+                        : 0);
+                  }
+                  if(widget.timeType == TimeType.seconds) {
+                    controller.updateSeconds(int.parse(widget.inputController.text));
                 }
               },
             ),
@@ -71,9 +66,4 @@ class _InputTimeBoxWidgetState extends State<InputTimeBoxWidget> {
       ],
     );
   }
-
-  void _updateTime() {
-
-  }
-
 }
