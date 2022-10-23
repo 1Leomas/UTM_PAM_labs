@@ -14,18 +14,19 @@ class ButtonPause extends StatelessWidget {
         type: MaterialType.circle,
         color: CustomColors.fieryRose,
         child: IconButton(
-          padding: const EdgeInsets.only(left: 0),
+          padding: controller.buttonPause.isFalse ? const EdgeInsets.only(left: 0) : const EdgeInsets.only(left: 9),
           iconSize: 76,
           splashRadius: 36,
           onPressed: () {
-            controller.changeButtonSate();
-            if (controller.buttonState.isTrue) {
-              controller.startTimer();
+            if (controller.buttonPause.isFalse) {
+              controller.pauseTimer();
+              controller.buttonPause(true);
             } else {
-              controller.stopTimer();
+              controller.unPauseTimer();
+              controller.buttonPause(false);
             }
           },
-          icon: SvgAssets.iconPause,
+          icon: controller.buttonPause.isFalse ? SvgAssets.iconPause : SvgAssets.iconStart,
           color: CustomColors.white,
         )
     );

@@ -4,9 +4,9 @@ import 'package:lab3_figma_flutter/resources/custom_colors.dart';
 import 'fonts.dart';
 
 class TextStyles {
-  static TextStyle textStyleSFPro32({Color? color}) =>
+  static TextStyle textStyleSFPro32({Color? color, double fontSize = 32}) =>
       TextStyle(
-        fontSize: 32,
+        fontSize: fontSize,
         fontWeight: FontWeight.w600,
         color: color ?? CustomColors.white,
         fontFamily: Fonts.sfProText);

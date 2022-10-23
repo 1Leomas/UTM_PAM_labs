@@ -18,11 +18,11 @@ class ButtonStart extends StatelessWidget {
           iconSize: 76,
           splashRadius: 36,
           onPressed: () {
-            controller.changeButtonSate();
-            if (controller.buttonState.isTrue) {
+            if (controller.buttonState.isFalse
+                && (controller.hours > 0 || controller.minutes > 0 || controller.seconds > 0)
+            ) {
+              controller.changeButtonSate();
               controller.startTimer();
-            } else {
-              controller.stopTimer();
             }
           },
           icon: SvgAssets.iconStart,

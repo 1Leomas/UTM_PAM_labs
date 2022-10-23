@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lab3_figma_flutter">
    <application
-        android:label="lab3_figma_flutter"
+        android:label="CountdownTimer"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

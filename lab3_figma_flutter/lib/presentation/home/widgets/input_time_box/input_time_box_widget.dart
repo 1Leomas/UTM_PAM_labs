@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/input_time_controller.dart';
 import 'package:lab3_figma_flutter/resources/custom_colors.dart';
-import 'package:lab3_figma_flutter/resources/enums.dart';
-import 'package:lab3_figma_flutter/resources/strings.dart';
 import 'package:lab3_figma_flutter/resources/text_styles.dart';
+import 'package:numberpicker/numberpicker.dart';
 
 class InputTimeBoxWidget extends StatefulWidget {
-  const InputTimeBoxWidget (this.timeType, {super.key, required this.inputController});
+  const InputTimeBoxWidget (this.time, {super.key,this.maxValue = 59});
 
-  final TextEditingController inputController;
-  final TimeType timeType;
+  final RxInt time;
+  final int maxValue;
 
   @override
   State<InputTimeBoxWidget> createState() => _InputTimeBoxWidgetState();
@@ -20,8 +18,6 @@ class _InputTimeBoxWidgetState extends State<InputTimeBoxWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.find<InputTimeController>();
-
     return Column(
       children: [
         Container(
@@ -32,35 +28,19 @@ class _InputTimeBoxWidgetState extends State<InputTimeBoxWidget> {
               borderRadius: const BorderRadius.all(Radius.circular(4))
           ),
           child: Center(
-            child: TextField(
-              controller: widget.inputController,
-              keyboardType: TextInputType.number,
-              style: TextStyles.textStyleSFPro32(),
-              decoration: InputDecoration(
-                hintText: Strings.zeroZero,
-                hintStyle: TextStyles.textStyleSFPro32(),
-                counterText: "",
-                border: InputBorder.none,
-              ),
-              textAlign: TextAlign.center,
-              maxLength: 2,
-              cursorColor: CustomColors.white,
-              onChanged: (value) {
-                  if(widget.timeType == TimeType.hours) {
-                    controller.updateHours(value.isNotEmpty
-                        ? int.parse(widget.inputController.text)
-                        : 0);
-                  }
-                  if(widget.timeType == TimeType.minutes) {
-                    controller.updateMinutes(value.isNotEmpty
-                        ? int.parse(widget.inputController.text)
-                        : 0);
-                  }
-                  if(widget.timeType == TimeType.seconds) {
-                    controller.updateSeconds(int.parse(widget.inputController.text));
-                }
+            child: Obx(() => NumberPicker(
+              selectedTextStyle: TextStyles.textStyleSFPro32(fontSize: 40),
+              //infiniteLoop: true,
+              zeroPad: true,
+              itemCount: 1,
+              itemHeight: 40,
+              minValue: 0,
+              maxValue: widget.maxValue,
+              value: widget.time.value,
+              onChanged: (int value) {
+                widget.time(value);
               },
-            ),
+            ))
           ),
         ),
       ],

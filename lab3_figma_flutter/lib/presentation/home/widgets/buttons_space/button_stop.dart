@@ -14,18 +14,16 @@ class ButtonStop extends StatelessWidget {
         type: MaterialType.circle,
         color: CustomColors.fieryRose,
         child: IconButton(
-          padding: const EdgeInsets.only(left: 9),
+          padding: const EdgeInsets.only(left: 0),
           iconSize: 76,
           splashRadius: 36,
           onPressed: () {
-            controller.changeButtonSate();
-            if (controller.buttonState.isTrue) {
-              controller.startTimer();
-            } else {
-              controller.stopTimer();
-            }
+            controller.buttonState(false);
+            controller.buttonPause(false);
+            controller.stopTimer();
           },
-          icon: SvgAssets.iconStart,
+          icon: SvgAssets.iconStop
+          ,
           color: CustomColors.white,
         )
     );

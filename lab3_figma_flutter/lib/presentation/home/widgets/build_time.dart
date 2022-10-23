@@ -1,8 +1,5 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lab3_figma_flutter/presentation/home/home_page.dart';
 import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/input_time_controller.dart';
 import 'package:lab3_figma_flutter/resources/custom_colors.dart';
 import 'package:lab3_figma_flutter/resources/text_styles.dart';
@@ -24,12 +21,11 @@ class _BuildTimeState extends State<BuildTime> {
       controller.sHours.value = twoDigits(controller.duration.value.inHours.remainder(60));
       controller.sMinutes.value = twoDigits(controller.duration.value.inMinutes.remainder(60));
       controller.sSeconds.value = twoDigits(controller.duration.value.inSeconds.remainder(60));
-
       return Stack(
         fit: StackFit.expand,
         children: [
           CircularProgressIndicator(
-            value: controller.duration.value.inSeconds / controller.totalDuration,
+            value: controller.duration.value.inMilliseconds / controller.totalDuration.inMilliseconds,
             backgroundColor: CustomColors.fieryRose,
             color: CustomColors.white,
             strokeWidth: 8,

@@ -21,29 +21,27 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
         backgroundColor: CustomColors.awesome,
-        body: SingleChildScrollView(
-          child: Center(
-            child: Column(
-              children: [
-                const SizedBox(height: 79),
-                HomeTitleWidget(),
-                const SizedBox(height: 140),
-                SizedBox(
-                  height: 298,
-                  width: 298,
-                  child:  Obx(() {
-                    if(controller.buttonState.isFalse) {
-                      return InputTimeWidget();
-                    } else {
-                      return BuildTime();
-                    }
-                  }),
-                ),
-                const SizedBox(height: 105),
-                ButtonControlWidget(),
-              ],
-            ),
-          )
+        body: Center(
+          child: Column(
+            children: [
+              const SizedBox(height: 79),
+              HomeTitleWidget(),
+              const SizedBox(height: 140),
+              SizedBox(
+                height: 298,
+                width: 298,
+                child:  Obx(() {
+                  if(controller.buttonState.isFalse) {
+                    return InputTimeWidget();
+                  } else {
+                    return BuildTime();
+                  }
+                }),
+              ),
+              const SizedBox(height: 105),
+              ButtonControlWidget(),
+            ],
+          ),
         )
     );
   }

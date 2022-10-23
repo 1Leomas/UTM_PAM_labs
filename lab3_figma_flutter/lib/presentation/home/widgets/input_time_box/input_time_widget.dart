@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/input_time_box_widget.dart';
 import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/input_time_controller.dart';
 import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/twoDots.dart';
-import 'package:lab3_figma_flutter/resources/enums.dart';
 import 'package:lab3_figma_flutter/resources/strings.dart';
 import 'package:lab3_figma_flutter/resources/text_styles.dart';
 
@@ -18,16 +17,15 @@ class _InputTimeWidgetState extends State<InputTimeWidget> {
           Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            InputTimeBoxWidget(inputController: controller.hoursController, TimeType.hours,),
+            InputTimeBoxWidget(controller.hours, maxValue: 23),
             const TwoDotsWidget(),
-            InputTimeBoxWidget(inputController: controller.minutesController, TimeType.minutes,),
+            InputTimeBoxWidget(controller.minutes),
             const TwoDotsWidget(),
-            InputTimeBoxWidget(inputController: controller.secondsController, TimeType.seconds,),
+            InputTimeBoxWidget(controller.seconds),
           ],
         ),
         const SizedBox(height: 5),
         Row(
-          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 28),
