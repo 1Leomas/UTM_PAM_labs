@@ -4,7 +4,7 @@ import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/inpu
 import 'package:lab3_figma_flutter/resources/custom_colors.dart';
 import 'package:lab3_figma_flutter/resources/svg_assets.dart';
 
-class ButtonStop extends StatelessWidget {
+class ButtonRepeat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.find<InputTimeController>();
@@ -18,11 +18,11 @@ class ButtonStop extends StatelessWidget {
           iconSize: 76,
           splashRadius: 36,
           onPressed: () {
-            controller.buttonState(false);
+            controller.repeatTimer();
             controller.buttonPause(false);
-            controller.stopTimer();
+            controller.unPauseTimer();
           },
-          icon: SvgAssets.iconStop
+          icon: SvgAssets.iconRepeat
           ,
           color: CustomColors.white,
         )

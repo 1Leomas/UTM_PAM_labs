@@ -89,4 +89,9 @@ class InputTimeController extends GetxController {
     startTimer(restart: false);
   }
 
+  void repeatTimer(){
+    duration.value = Duration(milliseconds: totalDuration.inMilliseconds);
+    update();
+  }
+
 }
