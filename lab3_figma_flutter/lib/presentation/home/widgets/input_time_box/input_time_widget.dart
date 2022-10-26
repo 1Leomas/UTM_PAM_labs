@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/input_time_box_widget.dart';
-import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/input_time_controller.dart';
+import 'package:lab3_figma_flutter/presentation/home/home_controller.dart';
 import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/twoDots.dart';
 import 'package:lab3_figma_flutter/resources/strings.dart';
 import 'package:lab3_figma_flutter/resources/text_styles.dart';
@@ -9,7 +9,7 @@ import 'package:lab3_figma_flutter/resources/text_styles.dart';
 class _InputTimeWidgetState extends State<InputTimeWidget> {
   @override
   Widget build(BuildContext context) {
-    InputTimeController controller = Get.find();
+    HomeController controller = Get.find();
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,

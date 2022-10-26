@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lab3_figma_flutter/presentation/home/widgets/build_time.dart';
 import 'package:lab3_figma_flutter/presentation/home/widgets/buttons_space/button_controls_widget.dart';
-import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/input_time_controller.dart';
+import 'package:lab3_figma_flutter/presentation/home/home_controller.dart';
 import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/input_time_widget.dart';
 import 'package:lab3_figma_flutter/resources/custom_colors.dart';
 import 'widgets/home_title_widget.dart';
@@ -11,13 +11,13 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    Get.put(InputTimeController());
+    Get.put(HomeController());
   }
 
   @override
   Widget build(BuildContext context) {
 
-    InputTimeController controller = Get.find();
+    HomeController controller = Get.find();
 
     return Scaffold(
         backgroundColor: CustomColors.awesome,

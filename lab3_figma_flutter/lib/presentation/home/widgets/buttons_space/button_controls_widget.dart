@@ -4,12 +4,12 @@ import 'package:lab3_figma_flutter/presentation/home/widgets/buttons_space/butto
 import 'package:lab3_figma_flutter/presentation/home/widgets/buttons_space/button_repeat.dart';
 import 'package:lab3_figma_flutter/presentation/home/widgets/buttons_space/button_start.dart';
 import 'package:lab3_figma_flutter/presentation/home/widgets/buttons_space/button_stop.dart';
-import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/input_time_controller.dart';
+import 'package:lab3_figma_flutter/presentation/home/home_controller.dart';
 
 class _ButtonControlWidgetState extends State<ButtonControlWidget> {
   @override
   Widget build(BuildContext context) {
-    final controller = Get.find<InputTimeController>();
+    final controller = Get.find<HomeController>();
     return Obx(() {
       if(controller.isTimerRunning()
           || !controller.isCompleted()

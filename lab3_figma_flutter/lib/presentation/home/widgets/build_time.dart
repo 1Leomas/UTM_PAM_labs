@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lab3_figma_flutter/presentation/home/widgets/input_time_box/input_time_controller.dart';
+import 'package:lab3_figma_flutter/presentation/home/home_controller.dart';
 import 'package:lab3_figma_flutter/resources/custom_colors.dart';
 import 'package:lab3_figma_flutter/resources/text_styles.dart';
 
@@ -13,7 +13,7 @@ class _BuildTimeState extends State<BuildTime> {
   @override
   Widget build(BuildContext context) {
 
-    final controller = Get.find<InputTimeController>();
+    final controller = Get.find<HomeController>();
 
     String twoDigits(int n) => n.toString().padLeft(2, '0');
 

@@ -11,10 +11,10 @@
 >
 
 	<rect
-		x="10" y="150"
-		rx="10" ry="10"
+		x="150" y="150"
+		rx="25" ry="25"
 		width="200" height="200"
-		style=";stroke:white;stroke-width:9;fill-opacity:0.0;stroke-opacity:1.0"
+		style=";stroke:white;stroke-width:10;fill-opacity:0.0;stroke-opacity:1.0"
 	/>
 
 </svg>
