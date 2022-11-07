@@ -12,6 +12,7 @@ class HomeController extends GetxController {
 
   changeButtonSate() {
     buttonState(!(buttonState.value));
+    update();
   }
 
   updateHours(int h) {
@@ -73,7 +74,7 @@ class HomeController extends GetxController {
 
   bool isCompleted() {
     return
-      duration.value == totalDuration ||
+      duration == totalDuration ||
         duration.value.inSeconds == 0;
   }
 
@@ -86,6 +87,7 @@ class HomeController extends GetxController {
 
   void unPauseTimer() {
     startTimer(restart: false);
+    update();
   }
 
   void repeatTimer(){
