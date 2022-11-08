@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../../../resources/images_assets.dart';
 
-class ImageCardWidget extends StatelessWidget {
-  //const ImageCardWidget({Key? key}) : super(key: key);
+class ImageCardWidget extends StatefulWidget {
+  const ImageCardWidget({Key? key}) : super(key: key);
 
+  @override
+  State<ImageCardWidget> createState() => _ImageCardWidgetState();
+}
+
+class _ImageCardWidgetState extends State<ImageCardWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,3 +26,4 @@ class ImageCardWidget extends StatelessWidget {
     );
   }
 }
+
