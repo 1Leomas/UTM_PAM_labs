@@ -14,8 +14,8 @@ class HeaderWidget extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        color: CustomColors.white,
-        border: Border.all(color: Colors.deepOrangeAccent),
+        //color: CustomColors.white,
+        //border: Border.all(color: Colors.deepOrangeAccent),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.end,
