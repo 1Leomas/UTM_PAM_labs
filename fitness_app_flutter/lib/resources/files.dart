@@ -1,3 +1,4 @@
 class Files {
-  static String jsonFilePath = 'resources/files/fitness.json';
+  static String jsonFitnessFilePath = 'resources/files/fitness.json';
+  static String jsonAssetFilePath = 'resources/files/asset.json';
 }

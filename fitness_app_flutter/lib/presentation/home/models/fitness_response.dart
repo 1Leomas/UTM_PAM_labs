@@ -8,6 +8,7 @@ part 'fitness_response.g.dart';
 @JsonSerializable()
 class FitnessResponse {
   final List<Goal> goals;
+  @JsonKey(name: 'daily_exercises')
   final List<DailyExercises> dailyExercises;
 
   FitnessResponse(this.goals, this.dailyExercises);

@@ -11,7 +11,7 @@ FitnessResponse _$FitnessResponseFromJson(Map<String, dynamic> json) =>
       (json['goals'] as List<dynamic>)
           .map((e) => Goal.fromJson(e as Map<String, dynamic>))
           .toList(),
-      (json['dailyExercises'] as List<dynamic>)
+      (json['daily_exercises'] as List<dynamic>)
           .map((e) => DailyExercises.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
@@ -19,5 +19,5 @@ FitnessResponse _$FitnessResponseFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$FitnessResponseToJson(FitnessResponse instance) =>
     <String, dynamic>{
       'goals': instance.goals,
-      'dailyExercises': instance.dailyExercises,
+      'daily_exercises': instance.dailyExercises,
     };

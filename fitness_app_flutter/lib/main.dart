@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        backgroundColor: Colors.green
+        //backgroundColor: Colors.green
       ),
       color: Colors.green,
       home: HomePage(),
