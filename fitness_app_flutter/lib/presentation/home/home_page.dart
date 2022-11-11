@@ -26,9 +26,10 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       body: Container(
-        //color: CustomColors.cultured,
+        color: CustomColors.cultured,
         //decoration: BoxDecoration(border: Border.all(color: Colors.red, width: 3),),
         child: ListView(
+          physics: const NeverScrollableScrollPhysics(),
           children: [
             const HeaderWidget(title: Strings.startNewGoal),
             GoalCarouselWidget(goals: controller.goalItems),
