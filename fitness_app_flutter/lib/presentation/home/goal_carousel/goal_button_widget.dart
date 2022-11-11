@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../resources/custom_colors.dart';
 import '../../../resources/svg_assets.dart';
 
-class ExerciseButtonCardWidget extends StatelessWidget {
+class GoalButtonWidget extends StatelessWidget {
   //const ExerciseCardButtonWidget({Key? key}) : super(key: key);
 
   @override
@@ -20,8 +20,10 @@ class ExerciseButtonCardWidget extends StatelessWidget {
         elevation: 1,
         backgroundColor: CustomColors.cultured,
         onPressed: () {  },
-        child: SvgAssets.iconPlay,
-      )
+        child: Container(
+          child: SvgAssets.iconPlay,
+        ),
+      ),
     );
   }
 }

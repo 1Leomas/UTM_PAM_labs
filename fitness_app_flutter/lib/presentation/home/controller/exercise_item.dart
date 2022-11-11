@@ -1,16 +1,14 @@
 import '../../common/list_item.dart';
 
-class GoalItem extends ListItem {
-  final String cover;
+class ExerciseItem extends ListItem {
   final String title;
-  final String subTitle;
+  final String cover;
   final int caloriesCount;
   final int durationSeconds;
 
-  GoalItem({
-    required this.cover,
+  ExerciseItem({
     required this.title,
-    required this.subTitle,
+    required this.cover,
     required this.caloriesCount,
     required this.durationSeconds
   });

@@ -11,11 +11,13 @@ class ExercisePropertiesWidget extends StatelessWidget {
     super.key,
     required this.icon,
     required this.content,
-    required this.color});
+    required this.color,
+    this.fontWeight = FontWeight.w500});
 
   final String content;
   final Widget icon;
   final Color color;
+  final FontWeight fontWeight;
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +25,8 @@ class ExercisePropertiesWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         icon,
-        Text(
-          content,
-          style: TextStyles.poppins14(color: color, fontWeight: FontWeight.w500),
+        Text(content,
+          style: TextStyles.poppins14(color: color, fontWeight: fontWeight),
         )
       ],
     );

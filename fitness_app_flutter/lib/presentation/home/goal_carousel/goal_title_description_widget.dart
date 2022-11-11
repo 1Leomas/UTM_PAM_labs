@@ -4,8 +4,11 @@ import '../../../resources/custom_colors.dart';
 import '../../../resources/strings.dart';
 import '../../../resources/text_styles.dart';
 
-class TitleDescriptionWidget extends StatelessWidget {
-  //const TitleDescriptionWidget({Key? key}) : super(key: key);
+class GoalTitleDescriptionWidget extends StatelessWidget {
+  const GoalTitleDescriptionWidget({Key? key, required this.title, required this.subTitle}) : super(key: key);
+
+  final String title;
+  final String subTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -15,12 +18,12 @@ class TitleDescriptionWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            Strings.bodyBuilding,
+            title,
             style: TextStyles.poppins24(),
           ),
           const SizedBox(height: 4),
           Text(
-            Strings.fullBodyWorkout,
+            subTitle,
             style: TextStyles.poppins14(color: CustomColors.spanishGray, fontWeight: FontWeight.w500),
           ),
         ],

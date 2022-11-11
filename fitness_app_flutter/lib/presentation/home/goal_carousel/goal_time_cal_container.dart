@@ -5,11 +5,16 @@ import '../../../resources/strings.dart';
 import '../../../resources/svg_assets.dart';
 import '../widgets/exercise_properties_widget.dart';
 
-class TimeCalContainer extends StatelessWidget {
-  //const TimeCalContainer({super.key});
+class GoalTimeCalContainer extends StatelessWidget {
+  const GoalTimeCalContainer({super.key, required this.caloriesCount, required this.durationSeconds});
+
+  final int caloriesCount;
+  final int durationSeconds;
 
   @override
   Widget build(BuildContext context) {
+
+    int durationMinutes = (durationSeconds / 60).round();
     return Row(
       children: [
         Container(
@@ -23,7 +28,7 @@ class TimeCalContainer extends StatelessWidget {
           ),
           child: ExercisePropertiesWidget(
             icon: SvgAssets.iconClock,
-            content: Strings.string35Min,
+            content: "$durationMinutes min",
             color: CustomColors.yellowGreen,
           ),
         ),
@@ -37,7 +42,7 @@ class TimeCalContainer extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
           ),
           child: ExercisePropertiesWidget(
-              content: Strings.string120Cal,
+              content: "$caloriesCount cal",
               color: CustomColors.uclaGold,
               icon: SvgAssets.iconFire),
         ),

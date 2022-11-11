@@ -25,6 +25,19 @@ class TextStyles {
         fontFamily: Fonts.poppinsRegular,
         fontSize: fontSize,
         fontWeight: fontWeight,
+        //height: 1,//lineHeight/fontSize,
+        color: color,
+      );
+
+  static TextStyle poppins16({Color color = CustomColors.maastrichtBlue,
+    double fontSize = 16.0,
+    FontWeight fontWeight = FontWeight.w600,
+    double lineHeight = 24.0})
+  =>
+      TextStyle(
+        fontFamily: Fonts.poppinsRegular,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
         height: lineHeight/fontSize,
         color: color,
       );

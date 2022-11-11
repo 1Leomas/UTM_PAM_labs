@@ -6,4 +6,6 @@ class Strings {
   static const String fullBodyWorkout = 'Full body workout';
   static const String string35Min = '35 min';
   static const String string120Cal = '120 cal';
+
+  static const String dailyTask = 'Daily task';
 }
