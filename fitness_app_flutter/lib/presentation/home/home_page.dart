@@ -24,17 +24,33 @@ class _HomePageState extends State<HomePage> {
 
     HomeController controller = Get.find();
 
+    print("------- ${controller.goalItems.isNull}");
+    print("------- ${controller.goalItems.length}");
     return Scaffold(
       body: Container(
         color: CustomColors.cultured,
         //decoration: BoxDecoration(border: Border.all(color: Colors.red, width: 3),),
+
         child: ListView(
           physics: const NeverScrollableScrollPhysics(),
           children: [
             const HeaderWidget(title: Strings.startNewGoal),
-            GoalCarouselWidget(goals: controller.goalItems),
+
+            Obx( () => controller.goalItems.isNotEmpty
+                ? GoalCarouselWidget(goals: controller.goalItems)
+                : Container(width: 30, height: 300,
+                     child: const CircularProgressIndicator(),
+                  )
+            ),
+
             const HeaderWidget(title: Strings.dailyTask),
-            DailyExercisesList(exercises: controller.exerciseItems),
+
+            Obx( () => controller.exerciseItems.isNotEmpty
+                ? DailyExercisesList(exercises: controller.exerciseItems)
+                : Container(width: 30, height: 300,
+                    child: const CircularProgressIndicator(),
+                  )
+            ),
           ],
         ),
       )
