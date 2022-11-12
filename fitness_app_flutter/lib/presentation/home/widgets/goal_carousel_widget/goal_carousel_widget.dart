@@ -1,8 +1,6 @@
 import 'package:fitness_app_flutter/presentation/home/controller/goal_item.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../../../resources/custom_colors.dart';
 import 'goal_card_widget.dart';
 
 class GoalCarouselWidget extends StatefulWidget {

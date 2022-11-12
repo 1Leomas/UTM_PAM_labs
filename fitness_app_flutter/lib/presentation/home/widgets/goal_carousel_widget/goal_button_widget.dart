@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../resources/custom_colors.dart';
-import '../../../resources/svg_assets.dart';
+import '../../../../resources/custom_colors.dart';
+import '../../../../resources/svg_assets.dart';
 
 class GoalButtonWidget extends StatelessWidget {
-  //const ExerciseCardButtonWidget({Key? key}) : super(key: key);
+  const GoalButtonWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../resources/custom_colors.dart';
-import '../../../resources/strings.dart';
-import '../../../resources/text_styles.dart';
+import '../../../../resources/custom_colors.dart';
+import '../../../../resources/text_styles.dart';
 
 class GoalTitleDescriptionWidget extends StatelessWidget {
   const GoalTitleDescriptionWidget({Key? key, required this.title, required this.subTitle}) : super(key: key);

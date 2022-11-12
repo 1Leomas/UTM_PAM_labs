@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../resources/custom_colors.dart';
-import '../../../resources/strings.dart';
-import '../../../resources/svg_assets.dart';
-import '../widgets/exercise_properties_widget.dart';
+import '../../../../resources/custom_colors.dart';
+import '../../../../resources/svg_assets.dart';
+import '../exercise_properties_widget.dart';
 
 class GoalTimeCalContainer extends StatelessWidget {
   const GoalTimeCalContainer({super.key, required this.caloriesCount, required this.durationSeconds});

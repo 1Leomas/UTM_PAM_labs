@@ -4,9 +4,8 @@ import 'package:get/get.dart';
 import '../../resources/custom_colors.dart';
 import '../../resources/strings.dart';
 import 'controller/home_controller.dart';
-import 'daily_exercise/daily_execises_list.dart';
-import 'goal_carousel/goal_carousel_widget.dart';
-import 'daily_exercise/daily_exercise.dart';
+import 'widgets/daily_exercise_widget/daily_exercises_list.dart';
+import 'widgets/goal_carousel_widget/goal_carousel_widget.dart';
 import 'widgets/header_widget.dart';
 
 class _HomePageState extends State<HomePage> {
@@ -24,8 +23,6 @@ class _HomePageState extends State<HomePage> {
 
     HomeController controller = Get.find();
 
-    print("------- ${controller.goalItems.isNull}");
-    print("------- ${controller.goalItems.length}");
     return Scaffold(
       body: Container(
         color: CustomColors.cultured,
@@ -38,8 +35,8 @@ class _HomePageState extends State<HomePage> {
 
             Obx( () => controller.goalItems.isNotEmpty
                 ? GoalCarouselWidget(goals: controller.goalItems)
-                : Container(width: 30, height: 300,
-                     child: const CircularProgressIndicator(),
+                : const SizedBox(width: 30, height: 300,
+                     child: CircularProgressIndicator(),
                   )
             ),
 
@@ -47,8 +44,8 @@ class _HomePageState extends State<HomePage> {
 
             Obx( () => controller.exerciseItems.isNotEmpty
                 ? DailyExercisesList(exercises: controller.exerciseItems)
-                : Container(width: 30, height: 300,
-                    child: const CircularProgressIndicator(),
+                : const SizedBox(width: 30, height: 300,
+                    child: CircularProgressIndicator(),
                   )
             ),
           ],
@@ -59,6 +56,8 @@ class _HomePageState extends State<HomePage> {
 }
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   State<HomePage> createState() => _HomePageState();
 

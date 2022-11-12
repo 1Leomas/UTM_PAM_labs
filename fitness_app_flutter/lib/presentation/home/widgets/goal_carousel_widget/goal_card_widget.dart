@@ -1,7 +1,7 @@
 import 'package:fitness_app_flutter/presentation/home/controller/goal_item.dart';
 import 'package:flutter/material.dart';
 
-import '../../../resources/custom_colors.dart';
+import '../../../../resources/custom_colors.dart';
 import 'goal_button_widget.dart';
 import 'goal_content_widget.dart';
 
@@ -33,7 +33,7 @@ class GoalCardWidget extends StatelessWidget {
         child: Stack(
           children: [
             GoalContentWidget(goal: goal),
-            GoalButtonWidget(),
+            const GoalButtonWidget(),
           ],
         ),
       ),

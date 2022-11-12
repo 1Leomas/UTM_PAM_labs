@@ -1,6 +1,5 @@
 import 'package:fitness_app_flutter/presentation/home/controller/exercise_item.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_rx/src/rx_types/rx_types.dart';
 
 import 'daily_exercise.dart';
 

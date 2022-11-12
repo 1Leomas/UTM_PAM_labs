@@ -1,8 +1,6 @@
 import 'package:fitness_app_flutter/presentation/home/controller/exercise_item.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_rx/src/rx_types/rx_types.dart';
 
-import '../../../resources/svg_assets.dart';
 import 'daily_exercise_button.dart';
 import 'daily_exercise_content.dart';
 import 'daily_exercise_image.dart';
@@ -27,7 +25,7 @@ class DailyExercise extends StatelessWidget {
               durationSeconds: exercise.durationSeconds,
               caloriesCount: exercise.caloriesCount
           ),
-          DailyExerciseButton(),
+          const DailyExerciseButton(),
         ],
       ),
     );

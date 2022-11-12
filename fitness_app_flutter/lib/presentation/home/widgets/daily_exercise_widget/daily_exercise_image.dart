@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../resources/images_assets.dart';
-
 class DailyExerciseImage extends StatelessWidget {
   const DailyExerciseImage({Key? key, required this.cover}) : super(key: key);
 
