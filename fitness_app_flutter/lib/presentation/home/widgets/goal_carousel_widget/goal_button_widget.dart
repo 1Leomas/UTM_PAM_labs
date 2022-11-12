@@ -9,10 +9,10 @@ class GoalButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      //decoration: BoxDecoration(border: Border.all(color: Colors.red, width: 3),),
       margin: const EdgeInsets.only(
-        left: 246.0,
+        left: 226.0,
         top: 124.0,
-        right: 20
       ),
       height: 40,
       width: 40,

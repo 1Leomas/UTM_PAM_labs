@@ -16,29 +16,24 @@ class DailyExercisesList extends StatefulWidget {
 class _DailyExercisesListState extends State<DailyExercisesList> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 16.0),
-      height: 386,
-      //decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent),),
-      child: Column(
-        children: [
-          Expanded(
-            child: ListView.builder(
-              scrollDirection: Axis.vertical,
-              itemCount: widget.exercises.length,
-              itemBuilder: (_, i) {
-                var exercise = widget.exercises[i];
-                return Column(
-                  children: [
-                    DailyExercise(exercise: exercise),
-                    const SizedBox(height: 12),
-                  ],
-                );
-              },
-            ),
+    return Expanded(
+        child: Container(
+          //decoration: BoxDecoration(border: Border.all(color: Colors.blueAccent),),
+          child: ListView.builder(
+            padding: const EdgeInsets.all(0),
+            scrollDirection: Axis.vertical,
+            itemCount: widget.exercises.length,
+            itemBuilder: (_, i) {
+              var exercise = widget.exercises[i];
+              return Column(
+                children: [
+                  DailyExercise(exercise: exercise),
+                  const SizedBox(height: 12),
+                ],
+              );
+            },
           ),
-        ],
-      ),
+        )
     );
   }
 }

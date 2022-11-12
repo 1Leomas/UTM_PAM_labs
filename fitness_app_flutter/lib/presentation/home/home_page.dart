@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import '../../resources/custom_colors.dart';
@@ -23,34 +24,43 @@ class _HomePageState extends State<HomePage> {
 
     HomeController controller = Get.find();
 
-    return Scaffold(
-      body: Container(
-        color: CustomColors.cultured,
-        //decoration: BoxDecoration(border: Border.all(color: Colors.red, width: 3),),
+    final double statusBarHeight = MediaQuery.of(context).viewPadding.top;
 
-        child: ListView(
-          physics: const NeverScrollableScrollPhysics(),
-          children: [
-            const HeaderWidget(title: Strings.startNewGoal),
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: SystemUiOverlayStyle.dark, // play with this
+      child: Scaffold(
+          body: Container(
+            color: CustomColors.cultured,
+            //decoration: BoxDecoration(border: Border.all(color: Colors.red, width: 3),),
 
-            Obx( () => controller.goalItems.isNotEmpty
-                ? GoalCarouselWidget(goals: controller.goalItems)
-                : const SizedBox(width: 30, height: 300,
-                     child: CircularProgressIndicator(),
-                  )
+            child: Column(
+              //physics: const NeverScrollableScrollPhysics(),
+              children: [
+                SizedBox(height: statusBarHeight),
+
+                const HeaderWidget(title: Strings.startNewGoal),
+
+                Obx( () => controller.goalItems.isNotEmpty
+                    ? GoalCarouselWidget(goals: controller.goalItems)
+                    : const SizedBox(width: 30, height: 300,
+                  child: CircularProgressIndicator(),
+                )
+                ),
+
+                const HeaderWidget(title: Strings.dailyTask),
+
+                Obx( () => controller.exerciseItems.isNotEmpty
+                    ? DailyExercisesList(exercises: controller.exerciseItems)
+                    : const SizedBox(width: 30, height: 300,
+                  child: CircularProgressIndicator(),
+                )
+                ),
+
+              ],
             ),
-
-            const HeaderWidget(title: Strings.dailyTask),
-
-            Obx( () => controller.exerciseItems.isNotEmpty
-                ? DailyExercisesList(exercises: controller.exerciseItems)
-                : const SizedBox(width: 30, height: 300,
-                    child: CircularProgressIndicator(),
-                  )
-            ),
-          ],
-        ),
+          )
       )
+
     );
   }
 }

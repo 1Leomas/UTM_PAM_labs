@@ -25,18 +25,12 @@ class _GoalCarouselWidgetState extends State<GoalCarouselWidget> {
           Expanded(
             child: PageView.builder(
               scrollDirection: Axis.horizontal,
-              controller: PageController(viewportFraction: 0.85),
+              controller: PageController(viewportFraction: 0.85), //85
               padEnds: false,
               itemCount: widget.goals.length,
               itemBuilder: (_, i) {
                 var goal = widget.goals[i];
-                return Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(width: 16,),
-                    GoalCardWidget(goal: goal),
-                  ],
-                );
+                return GoalCardWidget(goal: goal);
               },
             ),
           ),
