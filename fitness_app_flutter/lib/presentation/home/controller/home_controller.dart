@@ -32,6 +32,5 @@ class HomeController extends GetxController{
         caloriesCount: e.caloriesCount,
         durationSeconds: e.durationSeconds)).toList();
 
-    //print("----- ${exerciseItems.first.title}");
   }
 }

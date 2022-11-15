@@ -34,7 +34,6 @@ class _HomePageState extends State<HomePage> {
             //decoration: BoxDecoration(border: Border.all(color: Colors.red, width: 3),),
 
             child: Column(
-              //physics: const NeverScrollableScrollPhysics(),
               children: [
                 SizedBox(height: statusBarHeight),
 
@@ -43,8 +42,8 @@ class _HomePageState extends State<HomePage> {
                 Obx( () => controller.goalItems.isNotEmpty
                     ? GoalCarouselWidget(goals: controller.goalItems)
                     : const SizedBox(width: 30, height: 300,
-                  child: CircularProgressIndicator(),
-                )
+                        child: CircularProgressIndicator(),
+                      )
                 ),
 
                 const HeaderWidget(title: Strings.dailyTask),
@@ -52,8 +51,8 @@ class _HomePageState extends State<HomePage> {
                 Obx( () => controller.exerciseItems.isNotEmpty
                     ? DailyExercisesList(exercises: controller.exerciseItems)
                     : const SizedBox(width: 30, height: 300,
-                  child: CircularProgressIndicator(),
-                )
+                        child: CircularProgressIndicator(),
+                      )
                 ),
 
               ],

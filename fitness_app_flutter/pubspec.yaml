@@ -34,7 +34,7 @@ dependencies:
 
   get:
   flutter_svg:
-  # for JSON serializing
+  # for JSON serialization
   json_annotation:
   http:
 
@@ -47,7 +47,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  # for JSON serializing
+  # for JSON serialization
   json_serializable:
   build_runner:
 

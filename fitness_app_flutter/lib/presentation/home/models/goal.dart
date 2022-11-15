@@ -21,21 +21,8 @@ class Goal {
     required this.durationSeconds
   });
 
-  factory Goal.fromJson(Map<String, dynamic> json) => _$GoalFromJson(json);
+  factory Goal.fromJson(Map<String, dynamic> json)
+                => _$GoalFromJson(json);
 
   Map<String, dynamic> toJson() => _$GoalToJson(this);
-
-  /*Goal.fromJson(Map<String, dynamic> json)
-      : cover = json['cover'],
-        title = json['title'],
-        subTitle = json['sub_title'],
-        caloriesCount = json['calories_count'],
-        durationSeconds = json['duration_seconds'];
-
-  Map<String, dynamic> toJson() => {
-  'cover' : cover,
-  'title' : title,
-  'sub_title' : subTitle,
-  'calories_count' : caloriesCount,
-  'duration_seconds' : durationSeconds};*/
 }
