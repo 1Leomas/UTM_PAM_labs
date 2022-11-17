@@ -16,6 +16,9 @@ class _HomePageState extends State<HomePage> {
     Get.lazyPut(() => HomeController());
     HomeController controller = Get.find();
     controller.readJsonFile();
+
+    controller.getUsers();
+
     super.initState();
   }
 
